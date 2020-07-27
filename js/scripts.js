@@ -3,10 +3,22 @@
 //const answer = prompt("Вам есть 18?", "18");
 //console.log(typeof(answer))
 
-const category = "tits";
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели,', '');
 
-console.log(`https://url.com/${category}/5`);
+const personalMoviesDB = {
+    count: numberOfFilms,
+    movies : {},
+    actors: {},
+    genres: [],
+    privat : false
+};
 
-const user = "Ivan";
+const a = prompt('Один из последних просмотренных фильмов?',  ''),
+b = prompt('На сколько оцените его?', ''),
+c = prompt('Один из последних просмотренных фильмов?', ''),
+d = prompt('На сколько оцените его?', '');
 
-alert(`Привет, ${user}`)
+personalMoviesDB.movies[a] = b;
+personalMoviesDB.movies[c] = d;
+
+console.log(personalMoviesDB);
